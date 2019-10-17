@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Dashboard UIC CS Teaching Assistants Work</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='dashboard.css') }}" rel="stylesheet">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark fixed-top flex-md-nowrap p-0">
+      <h1 class="navbar-brand col-sm-3 col-md-2 mr-0 mb-0 school">UIC</h1>
+      <h1 class="navbar-brand col-sm-9 col-md-10 mr-0 mb-0 dept">COMPUTER SCIENCE</h1>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+          <div class="sidebar-sticky">
+            <h5 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-3 mb-1 text-muted">
+              Chart type:
+            </h5>
+            <ul class="nav flex-column ml-1">
+              <li class="nav-item">
+                <a class="nav-link" href="index">Line - Single class</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="">Line - Multiple classes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="barchart.html">Bar - Single class</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="histogram.html">Histogram</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">TA working hours: Line - Multiple classes</h1>
+          </div>
+          <div class="row">
+            <div class="col-9">
+              <div class="row">
+                <form class="form-inline ml-3">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Semester</label>
+                  <select class="custom-select my-1 mr-5" id="inlineFormCustomSelectPref">
+                    <option value ='1' selected>Fall 2017</option>
+                    <option value='2'>Spring 2018</option>
+                  </select>
+                  <button type='button' class="btn btn-warning my-1 ml-5" id='clearBtn'>Clear chart</button>
+                </form>
+              </div>
+              <svg class="chart my-4" width="800" height="450"></svg>
+            </div>
+            <div class="legend my-4 col-3" width="200" height="450"></div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="{{ url_for('static', filename='multiline.js') }}"></script>
+  </body>
+</html>
