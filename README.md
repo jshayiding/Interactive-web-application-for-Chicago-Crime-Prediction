@@ -1,4 +1,4 @@
-# cs418-project-crime-pricers
+# Interactive Web Application for Chicago Crime Prediction
 
 ### RUN CRIME PRICERS INTERACTIVE APPLICATION
 -------------------
